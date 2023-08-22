@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-[Montserrat] scroll-smooth bg-[#edecec];
+  }
+
+  .nav-link{
+    @apply text-[#3b46f1] text-lg font-semibold duration-200 hover:text-purple;
+  }
+
+  body.overflow-hidden{
+    overflow: hidden;
+  }
+
+  .nav-link.active-link{
+    @apply text-purple pointer-events-none;
+  }
+
+  img{
+    @apply h-full w-full   
+  }
+
+  .button-filled{
+    @apply text-sm font-medium bg-purple text-white py-4 px-7 rounded-full cursor-pointer duration-200 hover:bg-bg-grays hover:text-purple hover:ring-2 hover:ring-inset hover:ring-purple;
+  }
+
+  .button-outlined{
+    @apply text-sm font-medium bg-transparent text-white py-4 px-7 rounded-full cursor-pointer duration-200  hover:bg-purple border-2 border-white
+  }
+
+
+
+}
