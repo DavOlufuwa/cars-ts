@@ -17,6 +17,9 @@ const Home = () => {
         <div>
           <div></div>
           <div></div>
+          <div>
+            <img src='' alt='toyota corolla 2022'/>
+          </div>
         </div>
       </section>
     </div>
