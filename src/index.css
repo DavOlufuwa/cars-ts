@@ -5,12 +5,14 @@
 @tailwind utilities;
 
 @layer base {
+
+
   body {
-    @apply font-[Montserrat] scroll-smooth bg-[#edecec];
+    @apply font-[Montserrat] scroll-smooth bg-bg-grays overflow-x-hidden;
   }
 
   .nav-link{
-    @apply text-[#3b46f1] text-lg font-semibold duration-200 hover:text-purple;
+    @apply text-[#6c6d78] text-lg font-semibold duration-200 hover:text-purple;
   }
 
   body.overflow-hidden{
@@ -30,7 +32,33 @@
   }
 
   .button-outlined{
-    @apply text-sm font-medium bg-transparent text-white py-4 px-7 rounded-full cursor-pointer duration-200  hover:bg-purple border-2 border-white
+    @apply text-sm font-medium bg-none border-white border-2 text-white py-4 px-7 rounded-full cursor-pointer duration-200  hover:bg-purple hover:border-purple  
+  }
+
+  .point{
+    @apply flex flex-col gap-2
+  }
+
+  .reason{
+    @apply font-semibold text-base text-blacks;
+  }
+
+  
+
+  .imgurre{
+    transform: rotateY(180deg) translateX(30%); 
+    min-width:700px;
+    height:515px;
+  }
+
+  @media (min-width: 1024px){
+    .imgurre{
+      transform: rotateY(180deg) translateX(23%);
+    }
+  }
+
+  .point{
+    @apply text-gray-text font-normal text-xs leading-6
   }
 
 
