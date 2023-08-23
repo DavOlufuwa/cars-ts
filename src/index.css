@@ -5,9 +5,12 @@
 @tailwind utilities;
 
 @layer base {
-
+  html{
+    scroll-behavior: smooth;
+  }
 
   body {
+    font-family: 'Montserrat', sans-serif;
     @apply font-[Montserrat] scroll-smooth bg-bg-grays overflow-x-hidden;
   }
 
@@ -36,31 +39,15 @@
   }
 
   .point{
-    @apply flex flex-col gap-2
+    @apply flex flex-col gap-2 text-gray-text font-normal text-xs leading-6
   }
 
   .reason{
     @apply font-semibold text-base text-blacks;
   }
 
+  .info{
+    @apply ml-5
+  }
   
-
-  .imgurre{
-    transform: rotateY(180deg) translateX(30%); 
-    min-width:700px;
-    height:515px;
-  }
-
-  @media (min-width: 1024px){
-    .imgurre{
-      transform: rotateY(180deg) translateX(23%);
-    }
-  }
-
-  .point{
-    @apply text-gray-text font-normal text-xs leading-6
-  }
-
-
-
 }

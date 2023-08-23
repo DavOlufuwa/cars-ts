@@ -2,7 +2,10 @@ import React from 'react'
 
 const Garage = () => {
   return (
-    <div>Garage</div>
+    <div>
+      <div className='min-h-screen'></div>
+      <div className='min-h-screen'></div>
+    </div>
   )
 }
 

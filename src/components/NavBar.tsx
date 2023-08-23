@@ -29,18 +29,19 @@ const NavBar = () => {
             <div>LOGO</div>
           </Link>
         </div>
-        <div className={`nav-link-container duration-300 absolute min-h-[70vh] left-0 top-[-100%] w-full flex items-center px-16 md:px-5 md:static md:min-h-max md:w-auto ${menuOpen && 'top-[0%] z-40 bg-[#0e0d0d]'}`}>
+        <div className={`nav-link-container duration-300 absolute min-h-screen left-0 top-[-100%] w-full flex items-center px-16 md:px-5 md:static md:min-h-max md:w-auto ${menuOpen && 'top-[0%] z-40 bg-bg-grays'}`}>
           <ul className="flex flex-col gap-8 md:flex-row md:items-center md:gap-[4vw] ">
             <li><NavLink to="/"  className={func} onClick={closeMenu}>Home</NavLink></li>
-            <li><NavLink to="#aboutus" className={"nav-link"} onClick={closeMenu}>About Us</NavLink></li>
             <li><NavLink to="cart" className={func} onClick={closeMenu}>Cart</NavLink></li>
-            <li><NavLink to="garage" className={func} onClick={closeMenu}>Garage</NavLink></li>
+            <li><NavLink to="garage" className={func} onClick={closeMenu}>Our Fleet</NavLink></li>
           </ul>
         </div>
         <div className="flex items-center gap-4">
-          <button className='button-filled'>
+          <a href="#footer" className='z-50' onClick={closeMenu}>
+          <button className='button-filled '>
             Contact Us
           </button>
+          </a>
           <div 
             className={`cursor-pointer h-10 md:hidden z-50`}
           >
