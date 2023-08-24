@@ -34,6 +34,10 @@
     @apply text-sm font-medium bg-purple text-white py-4 px-7 rounded-full cursor-pointer duration-200 hover:bg-transparent hover:text-purple hover:ring-2 hover:ring-inset hover:ring-purple;
   }
 
+  .button-filled-two{
+    @apply text-sm text-center font-medium bg-none ring-2 ring-inset ring-purple text-purple py-4 block rounded-full cursor-pointer duration-200 hover:bg-transparent hover:text-white hover:ring-2 hover:ring-inset hover:bg-purple;
+  }
+
   .button-outlined{
     @apply text-sm font-medium bg-none border-white border-2 text-white py-4 px-7 rounded-full cursor-pointer duration-200  hover:bg-purple hover:border-purple  
   }

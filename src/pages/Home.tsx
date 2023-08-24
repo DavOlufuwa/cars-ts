@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import Countup from 'react-countup'
 import Carfront from '/car-front.webp'
 import CarfrontTwo from '/car-front-2.webp'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   
@@ -28,7 +29,11 @@ const Home = () => {
         <div className='bg-gray-card px-4 rounded-3xl relative h-[50vh] md:px-10 mt-6 sm:mt-0'>
           <div className='absolute -top-3 max-w-max '>
             <div className='bg-bg-grays px-3 pt-2 rounded-t-full h-11 rotate-180 '>
-              <button className='button-filled rotate-180'>View Fleet</button>
+              <Link to="garage">
+                <button className='button-filled rotate-180'>
+                    View Fleet
+                </button>
+              </Link>
             </div>
           </div>
           <div className='bg-[rgba(50,50,50,0.45)] backdrop-blur-sm text-sm leading-7 absolute top-20 z-10 text-bg-color p-6 max-w-xs rounded-3xl md:top-40'>
@@ -115,9 +120,11 @@ const Home = () => {
         <div className="relative bg-blacks rounded-3xl py-6 md:p-12 h-[70vh] md:h-[100vh]">
           <div className='text-white absolute left-0  z-10 px-6 sm:px-10'>
             <p className='text-3xl pt-1 font-medium mb-8 md:text-5xl md:leading-tight xl:w-[75%] '>Purchase a vehicle today and become a part of our family of happy vehicle owners</p>
-            <button className='button-outlined'>
-              View Fleet
-            </button>
+            <Link to="garage">
+              <button className='button-outlined'>
+                  View Fleet
+              </button>
+            </Link>
           </div>
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1200" className='absolute -bottom-[90px] -rotate-[1deg] -right-[300px] sm:-right-[180px] md:-bottom-[120px]  md:-right-[200px] md:h-[80vh] lg:h-[90vh] lg:-bottom-[140px] lg:-right-[100px] 
           xl:-right-[30px] xl:h-[100vh]'>

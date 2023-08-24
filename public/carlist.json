@@ -1,0 +1,121 @@
+[
+  {
+    "id": "1",
+    "name": "Avalon",
+    "year": "2021",
+    "price": 36125,
+    "image": "https://cdn.filestackcontent.com/KiJp1frRRqhNm8HZziBQ"
+  },
+  {
+    "id": "2",
+    "name": "Avalon",
+    "year": "2022",
+    "price": 36825,
+    "image": "https://cdn.filestackcontent.com/bUjawEJQSXOuAFKXvK1c" 
+  },
+  {
+    "id": "3",
+    "name": "Camry",
+    "year": "2021",
+    "price": 25045,
+    "image": "https://cdn.filestackcontent.com/EnJfFYMPQC67Yl9tBn07"
+  },
+  {
+    "id": "4",
+    "name": "Camry",
+    "year": "2022",
+    "price": 26045,
+    "image": "https://cdn.filestackcontent.com/zXcaCJ0ZRdyOhPz41xmk"
+  },
+  {
+    "id": "5",
+    "name": "Camry",
+    "year": "2023",
+    "price": 27860,
+    "image": "https://cdn.filestackcontent.com/2ubhGUWXS1udR5BREzz4"
+  },
+  {
+    "id": "6",
+    "name": "Corolla",
+    "year": "2021",
+    "price": 20025,
+    "image": "https://cdn.filestackcontent.com/p85aONFMReuu8tPKJlse"
+  },
+  {
+    "id": "7",
+    "name": "Corolla",
+    "year": "2022",
+    "price": 21165,
+    "image": "https://cdn.filestackcontent.com/Hfor8VnJT7mUv5DJWRe2"
+  },
+  {
+    "id": "8",
+    "name": "Corolla",
+    "year": "2023",
+    "price": 23165,
+    "image": "https://cdn.filestackcontent.com/pLoqtCLjSRGFKfqh67Pw"
+  },
+  {
+    "id": "9",
+    "name": "Highlander",
+    "year": "2021",
+    "price": 35085,
+    "image": "https://cdn.filestackcontent.com/zPZT8Z9RnCJhinpdwkCr"
+  },
+  {
+    "id": "10",
+    "name": "Highlander",
+    "year": "2022",
+    "price": 38055,
+    "image": "https://cdn.filestackcontent.com/0rCerHicRzNiHTiCUiUF"
+  },
+  {
+    "id": "11",
+    "name": "Highlander",
+    "year": "2023",
+    "price": 42020,
+    "image": "https://cdn.filestackcontent.com/tXFNnvJTZWEv6Z3qwndw"
+  },
+  {
+    "id": "12",
+    "name": "Rav4",
+    "year": "2021",
+    "price": 27645,
+    "image": "https://cdn.filestackcontent.com/tzPQVNq3RQyg74GUOKgo"
+  },
+  {
+    "id": "13",
+    "name": "Rav4",
+    "year": "2022",
+    "price": 28445,
+    "image": "https://cdn.filestackcontent.com/2FGr6fMaRq6Wcglwnx7m"
+  },
+  {
+    "id": "14",
+    "name": "Rav4",
+    "year": "2023",
+    "price": 29785,
+    "image": "https://cdn.filestackcontent.com/tltubJb6TzmPxQOeIXot"
+  },
+  {
+    "id": "15",
+    "name" : "Tacoma",
+    "year": "2021",
+    "price": 27230,
+    "image": "https://cdn.filestackcontent.com/fyfTHc5S4WrywTvIFpM6"
+  },
+  {
+    "id": "16",
+    "name" : "Tacoma",
+    "year": "2022",
+    "price": 28930,
+    "image": "https://cdn.filestackcontent.com/146S9PMkS96Qv7PdhC5x"
+  },
+  {
+    "id": "17",
+    "name" : "Tacoma",
+    "year": "2023",
+    "price": 28930,
+    "image": "https://cdn.filestackcontent.com/pkTba8KiRiKWc8dPVhck"
+  }
+]
