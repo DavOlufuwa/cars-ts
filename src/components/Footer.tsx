@@ -16,13 +16,17 @@ const Footer = () => {
       </section>
       <section className="text-gray-300 sm:text-sm  p-6 flex flex-col gap-10 sm:flex-row sm:justify-between sm:px-12 ">
         <div className="flex flex-col gap-4 text-sm sm:w-[30%] ">
-          <div>LOGO</div>
+          <div>
+            <Link to="" className='flex tracking-tighter items-center min-w-max text-bg-grays font-[900] italic uppercase text-lg'>
+              MotorLuxe
+            </Link>
+          </div>
           <div>
             Welcome to our car purchase service!
             We offer a <span>convenient</span> and <span>affordable</span> way to buy your next car.
           </div>
           <div>
-            logo@gmail.com
+            motorluxe@gmail.com
           </div>
           <div>
             (+234) 809 000 000

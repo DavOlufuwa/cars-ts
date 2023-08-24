@@ -1,5 +1,6 @@
 import Menu from '/menu.svg'
 import Close from '/close.svg'
+
 import { Link, NavLink } from "react-router-dom"
 import { useState } from 'react'
 
@@ -25,8 +26,8 @@ const NavBar = () => {
     <header className="pb-3 md:py-3 pt-4">
       <nav className="flex justify-between items-center w-[92%] mx-auto" >
         <div className='z-50'>
-          <Link to="" className='flex items-center min-w-max'>
-            <div>LOGO</div>
+          <Link to="" className='flex items-center tracking-tighter min-w-max text-purple font-[900] italic uppercase text-lg'>
+            MotorLuxe
           </Link>
         </div>
         <div className={`nav-link-container duration-300 absolute min-h-screen left-0 top-[-100%] w-full flex items-center px-16 md:px-5 md:static md:min-h-max md:w-auto ${menuOpen && 'top-[0%] z-40 bg-bg-grays'}`}>

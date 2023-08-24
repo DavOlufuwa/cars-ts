@@ -130,8 +130,8 @@ const Home = () => {
           <img src={Carfront} alt='toyota rav 4 2021' data-aos="fade-right"  data-aos-easing="linear" data-aos-duration="900"/>
         </div>
         <div className='lg:w-[50%]'>
-          <div className='mb-8 font-semibold text-3xl md:text-4xl'>
-            Why Choose us ?
+          <div className='mb-8 font-semibold text-2xl sm:text-3xl md:text-4xl'>
+            Why Choose <span data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="700" className='uppercase font-black text-purple italic tracking-tighter'>motorluxe</span> ?
           </div>
           <div className='flex flex-col gap-10' data-aos="zoom-in-down">
             <div>
@@ -163,8 +163,8 @@ const Home = () => {
       </section>
       <section className='min-h-screen mb-16  px-4 sm:px-10 xl:px-24 pt-16 md:flex lg:gap-24 xl:justify-between xl:items-center'> 
         <div className='lg:w-[50%]'>
-          <div className='mb-8 font-semibold text-3xl md:text-4xl'>
-            How to purchase a car from us ?
+          <div className='mb-8 font-semibold text-2xl sm:text-3xl md:text-4xl'>
+            How to purchase a car from <span data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="700" className='uppercase font-black text-purple italic tracking-tighter'>motorluxe</span> ?
           </div>
           <div className='flex flex-col gap-10' data-aos="zoom-in-up">
             <div>
