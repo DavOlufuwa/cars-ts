@@ -67,7 +67,7 @@ const Vehicle = () => {
         <p className="font-medium text-xl md:text-2xl">
             &#8358; {(price * 550).toLocaleString()}
         </p>
-        <div className="grid place-content-center relative my-10 bg-gray-card rounded-3xl">
+        <div className="grid place-content-center relative my-10 bg-gray-card rounded-3xl" data-aos="fade-up">
           <img src={images[0].url} alt={images[0].alt} />
           <div 
             className="text-right font-semibold text-white bg-purple px-3 py-1 absolute bottom-0 right-0 cursor-pointer rounded-3xl rounded-tr-none rounded-bl-none"
