@@ -143,8 +143,7 @@ const Vehicle = () => {
               Gallery
             </div>
             <div className="px-5">
-              <Swiper              
-                autoplay={true}
+              <Swiper          
                 breakpoints={{
                   680: {
                     slidesPerView: 2,
