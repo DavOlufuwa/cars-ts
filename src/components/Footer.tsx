@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
         <div className="text-center sm:text-right">
           <button className="button-outlined mb-6">Free Consultation</button><br/>
-          <button className="button-filled">View Fleet</button>
+          <Link to="garage" className="button-filled">View Fleet</Link>
         </div>
       </section>
       <section className="text-gray-300 sm:text-sm  p-6 flex flex-col gap-10 sm:flex-row sm:justify-between sm:px-12 ">

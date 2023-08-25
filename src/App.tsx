@@ -6,6 +6,7 @@ import Vehicle from './pages/Vehicle';
 import Cart from './pages/Cart';
 
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
@@ -20,7 +21,9 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
