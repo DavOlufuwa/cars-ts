@@ -5,7 +5,7 @@ import CarCard from "../components/CarCard"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/swiper-bundle.css'
-import { Autoplay , Controller, Thumbs, Navigation, Pagination, EffectCoverflow } from "swiper/modules"
+import { Autoplay , Controller, Navigation} from "swiper/modules"
 import { useState } from "react";
 
 
@@ -16,7 +16,7 @@ type AccordionItemProps = {
 
 const Vehicle = () => {
 
-  const [showing, setShowing] = useState<boolean>(true)
+  const [showing, setShowing] = useState<boolean>(false)
 
   const AccordionItem = ({ header, ...rest }:AccordionItemProps) => (
     <Item
@@ -58,7 +58,7 @@ const Vehicle = () => {
 
 
   return (
-    <div className="">
+    <div>
       <div className="min-h-[65vh] px-6 sm:px-10 lg:px-32">
         <div className='text-left text-gray-800 my-6 font-bold text-3xl md:text-5xl'> Toyota {name}
            <span data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="700" className='uppercase font-bold text-purple italic tracking-tighter'> {year}
@@ -67,20 +67,20 @@ const Vehicle = () => {
         <p className="font-medium text-xl md:text-2xl">
             &#8358; {(price * 550).toLocaleString()}
         </p>
-        <div className="grid place-content-center relative my-10 bg-gray-card">
+        <div className="grid place-content-center relative my-10 bg-gray-card rounded-3xl">
           <img src={images[0].url} alt={images[0].alt} />
           <div 
-            className="text-right font-semibold text-white bg-indigo-500 px-3 py-1 absolute bottom-0 right-0 cursor-pointer"
+            className="text-right font-semibold text-white bg-purple px-3 py-1 absolute bottom-0 right-0 cursor-pointer rounded-3xl rounded-tr-none rounded-bl-none"
             onClick={() => {
               setShowing(true)
-              bodyElem?.classList.add('overflow-hidden')
+              bodyElem?.classList.add('overflow-y-hidden')
             }}
           >
-            Gallery <span className="font-black text-xl">&#8594;</span>
+            Gallery <span className="font-black text-xl ">&#8594;</span>
           </div>
         </div>
         <div className="grid place-content-center">
-          <Link to={"Cart"} className="button-filled-two text-lg px-10 py-3" >
+          <Link to={"Cart"} className="button-filled-two text-lg w-48 py-3" >
             Add to Cart
           </Link>
         </div>
@@ -130,21 +130,21 @@ const Vehicle = () => {
           }
         </div>
       </section>
-      <div className={`${showing ? 'block' : 'hidden'} absolute top-0 left-0 min-h-screen w-full bg-[rgba(0,0,0,0.99)] z-50 `}>
+      <div className={`${showing ? 'block' : 'hidden'} fixed top-0 h-full w-full bg-gray-300 z-50  `}>
         <div 
-          className="text-white max-w-max ml-auto font-black text-3xl text-right my-4 cursor-pointer mx-4"
+          className="text-gray-700 max-w-max ml-auto font-black text-3xl text-right my-4 cursor-pointer mx-4"
           onClick={() => {
             setShowing(false)
-            bodyElem?.classList.remove('overflow-hidden')
+            bodyElem?.classList.remove('overflow-y-hidden')
           }}
         >&#10005;</div>
-          <div className="">
-            <div className="my-auto">
-              <Swiper
-                className="min-w-screen"
-                autoplay={{
-                  delay: 4000
-                }}
+          <div className="my-auto">
+            <div className="text-center mb-16 text-gray-700 font-medium text-2xl">
+              Gallery
+            </div>
+            <div className="px-5">
+              <Swiper              
+                autoplay={true}
                 breakpoints={{
                   680: {
                     slidesPerView: 2,
@@ -155,6 +155,9 @@ const Vehicle = () => {
                   1024: {
                     slidesPerView: 4,
                   },
+                  1600: {
+                    slidesPerView: 5,
+                  }
                 }}
                 spaceBetween={30}
                 loop={true}

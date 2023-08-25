@@ -23,7 +23,7 @@
   }
 
   .nav-link.active-link{
-    @apply text-purple pointer-events-none;
+    @apply text-purple ;
   }
 
   img{
