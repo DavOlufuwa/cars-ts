@@ -15,17 +15,17 @@ const CarCard = ({cars}: CarCardPropsType) => {
     }
   ,[])
 
-  const {image, name, year, price} = cars
+  const {id,images, name, year, price} = cars
   return (
     <div data-aos="fade-up" className="flex flex-col gap-7 shadow-lg shadow-slate-200 rounded-3xl p-6 duration-300 hover:shadow-xl hover:shadow-indigo-200">
       <Link
-        to={`/garage/${""}/${""}`}
+        to={`/garage/${id}/${name.toLowerCase()}/${year}`}
       >
         <div className="relative h-64 flex items-center">
           <div className="bg-gray-card h-full w-full rounded-3xl">
           </div>
           <div className="absolute top-1/2 -translate-y-1/2 ">
-            <img className="" src={image} alt={`An Image of Toyota ${name} ${year}`} />
+            <img className="" src={images[0].url} alt={`An Image of Toyota ${name} ${year}`} />
           </div>
         </div>
       </Link>

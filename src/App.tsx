@@ -12,7 +12,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path='cart' element={<Cart />} />
       <Route path='garage' element={<Garage/>} />
-      <Route path='garage/:vehicle/:year' element={<Vehicle/>} />
+      <Route path='garage/:id/:vehicle/:year' element={<Vehicle/>} />
     </Route>
   )
 )

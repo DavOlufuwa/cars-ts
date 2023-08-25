@@ -5,8 +5,19 @@ export interface CarList {
   id: number;
   name: string;
   year: string;
+  bodyStyle: string;
+  seatingCapacity: number;
+  door: string;
   price: number;
-  image: string;
+  images: {
+    url: string,
+    alt: string}[];
+  combinedMPGMilesPerGallon: number;
+  driveTrain: string;
+  engine: string;
+  tankCapacity: number;
+  interior: string[];
+  saftey: string[];
 }
 
 
