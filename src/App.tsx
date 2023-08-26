@@ -8,26 +8,30 @@ import ScheduleDrive from './pages/ScheduleDrive';
 import { useCartStore } from './utils/CartStore';
 
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path='/' element={<Layout/>}>
-      <Route index element={<Home />} />
-      <Route path='cart' element={<Cart />} />
-      <Route path='garage' element={<Garage/>} />
-      <Route path='garage/:id/:vehicle/:year' element={<Vehicle/>} />
-      {
-        useCartStore.getState().cartItems.length > 0 &&  
-        <Route path='scheduledrive' element={<ScheduleDrive/>} />
-      }
-    </Route>
-  )
-)
 
 
 function App() {
+
+  const cartItems = useCartStore((state) => state.cartItems)
+
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider router={
+        createBrowserRouter(
+          createRoutesFromElements(
+            <Route path='/' element={<Layout/>}>
+              <Route index element={<Home />} />
+              <Route path='cart' element={<Cart />} />
+              <Route path='garage' element={<Garage/>} />
+              <Route path='garage/:id/:vehicle/:year' element={<Vehicle/>} /> 
+              {
+                cartItems.length > 0 &&
+                <Route path='scheduledrive' element={<ScheduleDrive/>} />
+              }
+            </Route>
+          )
+        )        
+      } />
     </>
   );
 }

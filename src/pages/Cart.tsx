@@ -25,7 +25,13 @@ const Cart = () => {
     <div className='min-h-screen'>
       <div>
         <div className='text-center my-6 mb-12  font-black uppercase text-3xl md:text-5xl'> 
-          Your <span data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="700" className='uppercase font-black text-purple italic tracking-tighter'>CART</span>
+          Your <span data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="700" className='uppercase  text-purple italic tracking-tighter'>CART</span>
+        {
+          cartItems.length === 0 &&
+          <div data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-delay="300" data-aos-duration="800">
+          <span className='italic text-purple'>is</span> Empty
+          </div>
+        }
         </div>
       </div>
       <div className='px-4 sm:px-10 lg:px-32 xl:px-64 flex flex-col gap-3'>
