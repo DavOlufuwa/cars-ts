@@ -12,6 +12,7 @@ import { useCartStore } from './utils/CartStore';
 
 function App() {
 
+
   const cartItems = useCartStore((state) => state.cartItems)
 
   return (

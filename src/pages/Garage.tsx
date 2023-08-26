@@ -1,4 +1,3 @@
-import React from 'react'
 import CarCard from '../components/CarCard'
 import { useCarList } from '../utils/CarListStore'
 

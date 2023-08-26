@@ -11,8 +11,9 @@ const Cart = () => {
     AOS.init()
   }, [])
 
+  
   const cartItems = useCartStore((state) => state.cartItems)
-
+  
   const totalCost = useMemo(() => {
     return cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0)
   }, [cartItems])
