@@ -1,10 +1,11 @@
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Outlet } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home';
 import Layout from './pages/Layout';
 import Garage from './pages/Garage';
 import Vehicle from './pages/Vehicle';
 import Cart from './pages/Cart';
-
+import ScheduleDrive from './pages/ScheduleDrive';
+import { useCartStore } from './utils/CartStore';
 
 
 const router = createBrowserRouter(
@@ -14,6 +15,10 @@ const router = createBrowserRouter(
       <Route path='cart' element={<Cart />} />
       <Route path='garage' element={<Garage/>} />
       <Route path='garage/:id/:vehicle/:year' element={<Vehicle/>} />
+      {
+        useCartStore.getState().cartItems.length > 0 &&  
+        <Route path='scheduledrive' element={<ScheduleDrive/>} />
+      }
     </Route>
   )
 )

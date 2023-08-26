@@ -3,12 +3,16 @@ import { CarList } from "../utils/CarListStore"
 import { useEffect } from "react"
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import { useCartStore } from "../utils/CartStore";
 
 type CarCardPropsType = {
   cars: CarList
 }
 
 const CarCard = ({cars}: CarCardPropsType) => {
+  
+  const addCartItem  = useCartStore((store)=> store.addCartItem)
+
   useEffect(
     () => {
       AOS.init()
@@ -41,9 +45,12 @@ const CarCard = ({cars}: CarCardPropsType) => {
           </p>
         </div>
         <div>
-          <Link to={"Cart"} className="button-filled-two" >
+          <div 
+            onClick={() => addCartItem(cars)}
+            className="button-filled-two" 
+          >
             Add to Cart
-          </Link>
+          </div>
         </div>
       </div>
     </div>

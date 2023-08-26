@@ -3,7 +3,7 @@ import Close from '/close.svg'
 
 import { Link, NavLink } from "react-router-dom"
 import { useState } from 'react'
-
+import { useCartStore } from '../utils/CartStore'
 
 export const func = ({isActive}:{isActive: boolean}): string => isActive ? "nav-link active-link" : " nav-link"
 
@@ -22,6 +22,7 @@ const NavBar = () => {
     body?.classList.remove('overflow-hidden')
   }
 
+  const cartItems = useCartStore((state) => state.cartItems)
   return (
     <header className="pb-3 md:py-3 pt-4">
       <nav className="flex justify-between items-center w-[92%] mx-auto" >
@@ -35,6 +36,9 @@ const NavBar = () => {
             <li><NavLink to="/"  className={func} onClick={closeMenu}>Home</NavLink></li>
             <li><NavLink to="cart" className={func} onClick={closeMenu}>Cart</NavLink></li>
             <li><NavLink to="garage" className={func} onClick={closeMenu}>Our Fleet</NavLink></li>
+            <li className={`duration-200 ${cartItems.length > 0 ? 'opacity-1' : 'opacity-0 pointer-events-none'}`} >
+              <NavLink to="scheduledrive" className={func} onClick={closeMenu}>Schedule Drive</NavLink>
+            </li>
           </ul>
         </div>
         <div className="flex items-center gap-4">
