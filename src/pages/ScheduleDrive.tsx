@@ -14,6 +14,8 @@ const ScheduleDrive = () => {
 
 
   const handleDayClick = (day: Date) => {
+    console.log(day)
+   
     setSelected(day);
     setDayInfo(format(day, 'PPPP'));
   }
