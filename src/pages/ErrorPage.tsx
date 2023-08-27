@@ -11,8 +11,8 @@ const ErrorPage = () => {
           alt='404 error car'
         />
       </div>
-      <div className='text-xl text-center'>Looks Like You May Have Made a Mistake</div>
-      <Link to="/" className='button-filled w-40 mx-auto text-xl' >Go to homepage</Link>
+      <div className='text-lg font-medium text-center'>Looks Like You May Have Made a Mistake</div>
+      <Link to="/" className='button-filled mx-auto text-base' >Go to homepage</Link>
     </div>
   )
 }
