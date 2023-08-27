@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ErrorPage = () => {
   return (
-    <div className='min-h-screen grid place-content-center gap-2'>
+    <div className='min-h-screen grid place-content-center gap-2 px-10'>
       <div className='text-5xl font-extrabold text-purple text-center'>404 ERROR</div>
       <div>
         <img 
