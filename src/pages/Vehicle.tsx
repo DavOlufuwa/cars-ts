@@ -103,10 +103,10 @@ const Vehicle = () => {
             {driveTrain}
           </AccordionItem>
           <AccordionItem header="Tank Capacity">
-            {`${tankCapacity} Litres`} 
+            {`${tankCapacity} Gallons`} 
           </AccordionItem>
           <AccordionItem header="Combined Miles Per Gallon">
-            {`${combinedMPGMilesPerGallon.toString()} Litres`} 
+            {`${combinedMPGMilesPerGallon.toString()} Miles Per Gallon`} 
           </AccordionItem>
           <AccordionItem header="Vehicle Interior">
             {
