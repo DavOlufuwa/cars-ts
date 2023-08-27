@@ -18,9 +18,6 @@ const ScheduleDrive = () => {
     setDayInfo(format(day, 'PPPP'));
   }
 
-  
-
-
   useEffect(() => {
     AOS.init()
   }, [])
@@ -41,6 +38,7 @@ const ScheduleDrive = () => {
       <section className='flex flex-col gap-8 min-h-screen mb-8 pt-10 px-10 lg:px-36  md:flex-row xl:gap-32 xl:justify-center'>
         <div>
           <div className='border-2 border-[#a2a7f4] rounded-xl p-5 flex justify-center'>
+            
             <DayPicker 
               mode="single"
               selected={selected}
@@ -55,14 +53,13 @@ const ScheduleDrive = () => {
             />
           </div>
           <div className='my-3 text-sm font-semibold'>
-            {dayInfo && `Your selected date is: ${dayInfo}`}
+            {dayInfo ? `Your selected date is: ${dayInfo}` : `Please select a day`}
           </div>
         </div>
         <div className='w-full xl:w-1/2'>
           <ContactForm dayInfo={dayInfo}/>
         </div>
       </section>
-        
     </div>
   )
 }
