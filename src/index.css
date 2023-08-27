@@ -63,7 +63,7 @@
   }
 
   .input{
-    @apply py-2 px-3 rounded-md focus:ring-1 focus:ring-gray-600 hover:ring-1 hover:ring-gray-500
+    @apply py-2 px-3 rounded-md ring-1 ring-gray-300 font-medium placeholder:font-normal placeholder:italic placeholder:text-sm focus:ring-gray-600 hover:ring-1 hover:ring-gray-500
   }
   
 }
