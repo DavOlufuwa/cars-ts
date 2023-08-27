@@ -12,7 +12,7 @@ const ErrorPage = () => {
         />
       </div>
       <div className='text-lg font-medium text-center'>Looks Like You May Have Made a Mistake</div>
-      <Link to="/" className='button-filled mx-auto text-base' >Go to homepage</Link>
+      <Link to="/" className='button-filled mx-auto text-sm sm:text-base' >Go to homepage</Link>
     </div>
   )
 }
