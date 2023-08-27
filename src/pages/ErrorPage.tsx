@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ErrorPage = () => {
   return (
-    <div className='min-h-screen grid place-content-center gap-2 px-10'>
+    <div className='min-h-screen grid place-content-center gap-2 px-10 pt-0'>
       <div className='text-5xl font-extrabold text-purple text-center'>404 ERROR</div>
       <div>
         <img 
@@ -12,7 +12,9 @@ const ErrorPage = () => {
         />
       </div>
       <div className='text-lg font-medium text-center'>Looks Like You May Have Made a Mistake</div>
-      <Link to="/" className='button-filled mx-auto text-center'>Homepage</Link>
+      <div className='text-center mt-3'>
+        <Link to="/" className='button-filled mx-auto'>Homepage</Link>
+      </div>
     </div>
   )
 }
