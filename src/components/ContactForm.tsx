@@ -8,7 +8,6 @@ type selectedDateProps = {
 }
 
 const ContactForm = ({dayInfo}: selectedDateProps) => {
-
   const [phoneNumber, setPhoneNumber] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -17,6 +16,7 @@ const ContactForm = ({dayInfo}: selectedDateProps) => {
   const [buttonLabel , setButtonLabel] = useState('Schedule Drive')
   const form = useRef<HTMLFormElement>(null) 
 
+  const emptyCart = useCartStore((state) => state.emptyCart)
 
   const getName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSenderName(e.target.value)
@@ -47,8 +47,9 @@ const ContactForm = ({dayInfo}: selectedDateProps) => {
     }
   }
 
+  // Action to Close the Snackbar
   const action = (snackBarId: string | number) => (
-    <button onClick={() => closeSnackbar(snackBarId)} className='click-button'>&#10005;</button>
+    <button onClick={() => closeSnackbar(snackBarId)} className='text-white font-black text-2xl'>&#10005;</button>
   )
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -64,7 +65,7 @@ const ContactForm = ({dayInfo}: selectedDateProps) => {
         )
       .then(
         () => {
-          enqueueSnackbar(`${senderName}, kindly check your email for a confirmation`, {
+          enqueueSnackbar(`${senderName}, Scheduling Successful. kindly check your email for a confirmation`, {
             variant: 'info',
             action,
           })
@@ -78,12 +79,14 @@ const ContactForm = ({dayInfo}: selectedDateProps) => {
             action,
           })
           setButtonLabel('Schedule Drive')
+          emptyCart()
           console.log(error.text)
         }
       )
     }
 
     const cartItems = useCartStore((state) => state.cartItems)
+    
   
     const userChoice = cartItems.map((item) => `Toyota ${item.name} ${item.year} `)
 

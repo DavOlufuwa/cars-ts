@@ -4,6 +4,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 import CartCard from '../components/CartCard'
 import { useCartStore } from '../utils/CartStore'
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -35,26 +36,37 @@ const Cart = () => {
         }
         </div>
       </div>
-      <div className='px-4 sm:px-10 lg:px-32 xl:px-64 flex flex-col gap-3'>
-      <div className='font-semibold border-b pb-3 mb-2 flex justify-between items-center'>
-        <p className="w-24 text-center ">Vehicle</p>
-        <p className='w-32 sm:w-60  text-center'>Name & Price</p>
-        <p className='hidden sm:block  w-20 text-right md:'>Quantity</p>
-        <p className='block sm:hidden  w-10 text-right'>Qty</p>
-        <p className=' w-[4.5rem] md:w-[4.75rem] text-right'>Remove</p>
-      </div>
-        {
-          cartItems.map((item, index) => 
-            <CartCard key={index} cartCarInfo={item} />
-          )
-        }
-      <div className='flex justify-between items-center font-bold text-2xl border-y py-4 mt-4'>
-        <div className='font-medium text-xl'>
-          {totalQuantity} Vehicle{totalQuantity > 1 && "s"}
-        </div>        
-        <div> &#8358; {(totalCost * 550).toLocaleString()}</div>
-      </div>
-      </div>
+      {
+        cartItems.length === 0 ? 
+
+        <div className='text-center my-32'>
+          <Link to={"/garage"} className='button-filled text-lg'>Continue Shopping</Link>
+        </div>
+        :
+        <div className='px-4 sm:px-10 lg:px-32 xl:px-64 flex flex-col gap-3'>
+          <div className='font-semibold border-b pb-3 mb-2 flex justify-between items-center'>
+            <p className="w-24 text-center ">Vehicle</p>
+            <p className='w-32 sm:w-60  text-center'>Name & Price</p>
+            <p className='hidden sm:block  w-20 text-right md:'>Quantity</p>
+            <p className='block sm:hidden  w-10 text-right'>Qty</p>
+            <p className=' w-[4.5rem] md:w-[4.75rem] text-right'>Remove</p>
+          </div>
+            {
+              cartItems.map((item, index) => 
+                <CartCard key={index} cartCarInfo={item} />
+              )
+            }
+          <div className='flex justify-between items-center font-bold text-2xl border-y py-4 mt-5 mb-8'>
+            <div className='font-medium text-xl'>
+              {totalQuantity} Vehicle{totalQuantity > 1 && "s"}
+            </div>        
+            <div> &#8358; {(totalCost * 550).toLocaleString()}</div>
+          </div>
+          <div className='text-center'>
+            <Link to="/scheduledrive" className='button-filled'>Schedule Drive <span className='font-black text-xl'>&#8594;</span></Link>
+          </div>
+        </div>
+      }
     </div>
   )
 }

@@ -30,7 +30,7 @@ const Home = () => {
           <div className='absolute -top-3 max-w-max '>
             <div className='bg-bg-grays px-3 pt-2 rounded-t-full h-11 rotate-180 '>
               <Link to="garage">
-                <button className='button-filled rotate-180 bg-[#4854ff]'>
+                <button className='button-filled rotate-180'>
                     View Fleet
                 </button>
               </Link>
@@ -53,9 +53,9 @@ const Home = () => {
           <div className='text-center text-gray-text px-6 leading-6 text-sm md:w-[40%] mb-10'>
             We provide a hassle-free and budget-friendly solution for purchasing your next vehicle
             <div className='mt-4'>
-              <button className='button-filled'>
-                Get in touch
-              </button>
+            <Link to="mailto:davolufuwa@gmail.com?subject=I%20am%20looking%20for%20a%20frontend%20developer%20">
+            <button className="button-filled">Get in Touch</button><br/>  
+              </Link>
             </div>
           </div>
           <div className='md:w-[100%]'>

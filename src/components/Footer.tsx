@@ -10,14 +10,16 @@ const Footer = () => {
           </p>
         </div>
         <div className="text-center sm:text-right">
-          <button className="button-outlined mb-6">Free Consultation</button><br/>
+          <Link to="mailto:davolufuwa@gmail.com?subject=I%20am%20looking%20for%20a%20frontend%20developer%20">
+            <button className="button-outlined mb-6">Free Consultation</button><br/>  
+          </Link>
           <Link to="garage" className="button-filled">View Fleet</Link>
         </div>
       </section>
       <section className="text-gray-300 sm:text-sm  p-6 flex flex-col gap-10 sm:flex-row sm:justify-between sm:px-12 ">
         <div className="flex flex-col gap-4 text-sm sm:w-[30%] ">
           <div>
-            <Link to="" className='flex tracking-tighter items-center min-w-max text-bg-grays font-[900] italic uppercase text-lg'>
+            <Link to="/" className='flex tracking-tighter items-center min-w-max text-bg-grays font-[900] italic uppercase text-lg'>
               MotorLuxe
             </Link>
           </div>
@@ -49,13 +51,13 @@ const Footer = () => {
           <div className="max-w-[33%]">            
             <ul className="flex flex-col gap-4">
               <li>
-                <Link to="https://www.linkedin.com/in/davidolufuwa" target="_blank">LinkedIn</Link>
+                <Link to="https://www.linkedin.com/in/davidolufuwa" target="_blank">LinkedIn &#8599;</Link>
               </li>
               <li>
-                <Link to="https://twitter.com/d_lufuwa" target="_blank">Twitter</Link>
+                <Link to="https://twitter.com/d_lufuwa" target="_blank">Twitter &#8599;</Link>
               </li>
               <li>
-                <Link to="mailto:davolufuwa@gmail.com?subject=I%20am%20looking%20for%20a%20frontend%20developer%20" target="_blank">Gmail</Link>
+                <Link to="mailto:davolufuwa@gmail.com?subject=I%20am%20looking%20for%20a%20frontend%20developer%20" target="_blank">Gmail &#8599;</Link>
               </li>
             </ul>
           </div>

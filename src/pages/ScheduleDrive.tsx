@@ -52,7 +52,7 @@ const ScheduleDrive = () => {
               }}
             />
           </div>
-          <div className='my-3 text-sm font-semibold'>
+          <div className='my-3 text-sm font-semibold text-center'>
             {dayInfo ? `Your selected date is: ${dayInfo}` : `Please select a day`}
           </div>
         </div>

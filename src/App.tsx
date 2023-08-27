@@ -7,6 +7,7 @@ import Cart from './pages/Cart';
 import ScheduleDrive from './pages/ScheduleDrive';
 import { useCartStore } from './utils/CartStore';
 import { SnackbarProvider } from 'notistack';
+import ErrorPage from './pages/ErrorPage';
 
 
 
@@ -45,6 +46,7 @@ function App() {
                 cartItems.length > 0 &&
                 <Route path='scheduledrive' element={<ScheduleDrive/>} />
               }
+              <Route path='*' element={<ErrorPage />}/>
             </Route>
           )
         )        
