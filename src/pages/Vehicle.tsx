@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/swiper-bundle.css'
 import { Autoplay , Controller, Navigation} from "swiper/modules"
 import { useState } from "react";
+import { useCartStore } from "../utils/CartStore";
 
 
 type AccordionItemProps = {
@@ -51,11 +52,12 @@ const Vehicle = () => {
   const { allCars } = useCarList()
   const currentVehicle = allCars.find((car) => car.id.toString() === id)
   const otherSmoothRides = allCars.filter((car) => car.id.toString() !== id).slice(0, 4)
+  
   const {
     name, year, bodyStyle, seatingCapacity, door, price, images, combinedMPGMilesPerGallon, driveTrain, engine, tankCapacity, interior, saftey
   } = currentVehicle!
 
-
+  const addCartItem = useCartStore((state) => state.addCartItem)
 
   return (
     <div>
@@ -80,9 +82,9 @@ const Vehicle = () => {
           </div>
         </div>
         <div className="grid place-content-center">
-          <Link to={"Cart"} className="button-filled-two text-lg w-48 py-3" >
+          <div onClick={() => addCartItem(currentVehicle!)} className="button-filled-two text-lg w-48 py-3" >
             Add to Cart
-          </Link>
+          </div>
         </div>
       </div>
       <section className="min-h-screen px-6 sm:px-24 xl:px-32 mb-20">

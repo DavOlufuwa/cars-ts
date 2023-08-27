@@ -6,6 +6,7 @@ import Vehicle from './pages/Vehicle';
 import Cart from './pages/Cart';
 import ScheduleDrive from './pages/ScheduleDrive';
 import { useCartStore } from './utils/CartStore';
+import { SnackbarProvider } from 'notistack';
 
 
 
@@ -17,6 +18,21 @@ function App() {
 
   return (
     <>
+    <SnackbarProvider
+      maxSnack={2}
+      preventDuplicate
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'right'
+      }}
+      style={{
+        fontSize: '15px',
+        padding: '1rem 1.25rem',
+        backgroundColor: '#4854ff',
+        fontWeight : '500',
+        color: '#f2f2f2'
+      }}
+    >
       <RouterProvider router={
         createBrowserRouter(
           createRoutesFromElements(
@@ -33,6 +49,7 @@ function App() {
           )
         )        
       } />
+    </SnackbarProvider>
     </>
   );
 }

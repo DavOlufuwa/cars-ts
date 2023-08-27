@@ -30,7 +30,7 @@ const Home = () => {
           <div className='absolute -top-3 max-w-max '>
             <div className='bg-bg-grays px-3 pt-2 rounded-t-full h-11 rotate-180 '>
               <Link to="garage">
-                <button className='button-filled rotate-180'>
+                <button className='button-filled rotate-180 bg-[#4854ff]'>
                     View Fleet
                 </button>
               </Link>
