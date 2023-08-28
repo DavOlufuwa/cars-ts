@@ -34,8 +34,8 @@ const NavBar = () => {
         <div className={`nav-link-container duration-300 absolute min-h-screen left-0 top-[-100%] w-full flex items-center px-16 md:px-5 md:static md:min-h-max md:w-auto ${menuOpen && 'top-[0%] z-40 bg-bg-grays'}`}>
           <ul className="flex flex-col gap-8 md:flex-row md:items-center md:gap-[4vw] ">
             <li><NavLink to="/"  className={func} onClick={closeMenu}>Home</NavLink></li>
-            <li><NavLink to="cart" className={func} onClick={closeMenu}>Cart</NavLink></li>
             <li><NavLink to="garage" className={func} onClick={closeMenu}>Our Fleet</NavLink></li>
+            <li className='relative'>{cartItems.length > 0 && <span className='absolute left-10 sm:-right-4 -top-2 text-white bg-red-600 rounded-full h-5 w-5 text-center font-medium'>{cartItems.length}</span>}<NavLink to="cart" className={func} onClick={closeMenu}>Cart</NavLink></li>
             <li className={`duration-200 ${cartItems.length > 0 ? 'opacity-1' : 'opacity-0 pointer-events-none'}`} >
               <NavLink to="scheduledrive" className={func} onClick={closeMenu}>Schedule Drive</NavLink>
             </li>
