@@ -12,11 +12,20 @@ const ScheduleDrive = () => {
 
   const [dayInfo, setDayInfo] = useState<string>("")
 
+  const [dateError, setDateError] = useState<string>("")
+
 
   const handleDayClick = (day: Date) => {
     setSelected(day);
-    setDayInfo(format(day, 'PPPP'));
+    setDayInfo(format(day, 'PPPP'))
   }
+
+  const disabledDays = [
+    {
+      from: new Date(0),
+      to: new Date()
+    }
+  ]
 
   useEffect(() => {
     AOS.init()
@@ -42,6 +51,7 @@ const ScheduleDrive = () => {
             <DayPicker 
               mode="single"
               selected={selected}
+              disabled={disabledDays}
               onDayClick={handleDayClick}
               modifiersStyles={{
                 selected: {

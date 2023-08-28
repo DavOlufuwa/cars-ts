@@ -92,7 +92,7 @@ const ContactForm = ({dayInfo}: selectedDateProps) => {
 
 
   return (
-    <div className='min-w-max ring-1 ring-gray-400 rounded-xl p-5 xl:px-16'>
+    <div className={`min-w-max  duration-200 ${dayInfo ? 'ring-2 ring-purple':'ring-1 ring-gray-400'} rounded-xl p-5 xl:px-16`}>
       <div className='text-center text-lg text-gray-700 font-bold my-5'>Contact Information</div>
 
       <form ref={form} onSubmit={sendEmail} id='contact_form' className='flex flex-col gap-6'>
