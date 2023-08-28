@@ -15,6 +15,7 @@ const Home = () => {
 
   return (
     <div className='overflow-x-hidden'>
+      {/* Hero Section */}
       <section className='px-4 sm:px-10 flex flex-col gap-10'>
         <div className='flex flex-col items-center md:flex-row md:justify-between md:pt-4 xl:gap-36'>
           <div data-aos="fade-down" data-aos-easing="ease" data-aos-duration="600" className='text-5xl md:text-6xl xl:text-7xl tracking-tighter leading-tight font-medium md:leading-snug xl:leading-normal'>
@@ -45,6 +46,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Hero Section Ends */}
+      {/* About Us */}
       <section className='min-h-screen px-4 sm:px-10 pt-16 flex flex-col gap-10 xl:px-24' id="aboutus">
         <div data-aos="zoom-out-in" data-aos-easing="ease-in" data-aos-duration="600"  className='text-3xl leading-snug font-medium md:text-5xl md:leading-tight text-center md:mx-16'>
           We pride ourselves in providing quality and convenient transportation options and services to our customers with an emphasis on customer satisfaction.
@@ -116,6 +119,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* About us ends */}
+      {/* Purchase a vehicle */}
       <section className='min-h-screen px-4 sm:px-10 xl:px-24 pt-16 '>
         <div className="relative bg-blacks rounded-3xl py-6 md:p-12 h-[70vh] md:h-[100vh]">
           <div className='text-white absolute left-0  z-10 px-6 sm:px-10'>
@@ -132,6 +137,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Purchase a vehicle ends*/}
+      {/* Why choose us */}
       <section className='min-h-screen px-4 sm:px-10 xl:px-24 pt-16 md:flex lg:gap-24 xl:justify-between xl:items-center'>
         <div className='hidden lg:block'>
           <img src={Carfront} alt='toyota rav 4 2021' data-aos="fade-right"  data-aos-easing="linear" data-aos-duration="900"/>
@@ -168,6 +175,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Why choose us ends */}
+      {/* How to purchase a car */}
       <section className='min-h-screen mb-16  px-4 sm:px-10 xl:px-24 pt-16 md:flex lg:gap-24 xl:justify-between xl:items-center'> 
         <div className='lg:w-[50%]'>
           <div className='mb-8 font-semibold text-2xl sm:text-3xl md:text-4xl'>
@@ -208,6 +217,7 @@ const Home = () => {
           <img src={CarfrontTwo} alt='toyota rav 4 2021'/>
         </div>
       </section>
+      {/* How to Purchase a car ends */}
     </div>
   )
 }

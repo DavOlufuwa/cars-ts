@@ -36,9 +36,10 @@ const Cart = () => {
         }
         </div>
       </div>
+
+      {/* Conditionally rendering the Cart */}
       {
         cartItems.length === 0 ? 
-
         <div className='text-center my-32'>
           <Link to={"/garage"} className='button-filled text-lg'>Continue Shopping</Link>
         </div>

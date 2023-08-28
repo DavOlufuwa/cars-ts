@@ -6,6 +6,7 @@ const Garage = () => {
 
   
   return (
+    // Displaying all the cars from the CarListStore
     <div>
       <div>
         <div className='text-center my-6 font-black uppercase text-3xl md:text-5xl'> 
