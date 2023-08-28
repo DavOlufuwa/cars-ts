@@ -47,6 +47,5 @@ Feel free to modify and extend this project template according to your requireme
 
 Happy coding! If you have any questions or need assistance, feel free to open an issue or reach out to the project maintainers.
 
-**Contributors:** [Your Name](https://github.com/your-username)
 
-**Project Link:** [https://github.com/your-username/your-project](https://github.com/your-username/your-project)
+**Project Link:** [https://motorluxe.vercel.app](https://motorluxe.vercel.app)

@@ -87,7 +87,6 @@ const ContactForm = ({dayInfo}: selectedDateProps) => {
 
     const cartItems = useCartStore((state) => state.cartItems)
     
-  
     const userChoice = cartItems.map((item) => `Toyota ${item.name} ${item.year} `)
 
 
