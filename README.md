@@ -19,12 +19,12 @@ Follow these steps to get the project up and running on your local machine:
 
 1. **Clone the repository:**
    ```
-   git clone https://github.com//cars-ts.git
+   git clone https://github.com/DavOlufuwa/cars-ts.git
    ```
 
 2. **Navigate to the project directory:**
    ```
-   cd your-project
+   cd cars-ts
    ```
 
 3. **Install dependencies using Yarn:**
@@ -42,10 +42,6 @@ Follow these steps to get the project up and running on your local machine:
 ## Usage
 
 Feel free to modify and extend this project template according to your requirements. You can add new components, styles, and functionality to build your desired application. Refer to the documentation of each tool/library used in this project for more details on how to utilize their features effectively.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
