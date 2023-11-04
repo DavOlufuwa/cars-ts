@@ -67,7 +67,9 @@ const ContactForm = ({dayInfo}: selectedDateProps) => {
         () => {
           enqueueSnackbar(`${senderName}, Scheduling Successful. kindly check your email for a confirmation`, {
             variant: 'info',
+            persist: true,
             action,
+
           })
           setButtonLabel('Schedule Drive')
 
